@@ -1,6 +1,8 @@
 package com.example.bookagram.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,13 +18,17 @@ public class Book {
     private Long id;
 
     //ATTRIBUTES
+
     @Column(name = "Title")
+    @NotEmpty
     @Setter
     private String title;
 
     @Column(name = "ISBN")
     @Setter
-    private String ISBN;
+    /*@Pattern(regexp = "^(?:ISBN(?:-10)?:?●)?(?=[0-9X]{10}$|(?=(?:[0-9]+[-●]){3})[-●0-9X]{13}$)↵\n" +
+            "[0-9]{1,5}[-●]?[0-9]+[-●]?[0-9]+[-●]?[0-9X]$")*/
+    private String isbn;
 
     @Column(name = "Publisher")
     @Setter
@@ -51,4 +57,16 @@ public class Book {
     @Column(name = "IsReading")
     @Setter
     private boolean isReading;
+
+    @ManyToMany
+    @Setter
+    private List<Author> authors;
+
+    @ManyToMany
+    @Setter
+    private List<LentSubject> lentSubjects;
+
+    @ManyToMany
+    @Setter
+    private List<Category> categories;
 }

@@ -33,10 +33,4 @@ public class Author {
     @Column
     @Setter
     private String nationality;
-
-    //RELATIONSHIPS
-
-    @ManyToMany
-    @Setter
-    private List <Book> books;
 }

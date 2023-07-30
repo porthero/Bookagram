@@ -20,10 +20,4 @@ public class Category {
     @Column
     @Setter
     private String name;
-
-    //RELATIONSHIPS
-
-    @ManyToMany
-    @Setter
-    private List <Book> books;
 }

@@ -27,10 +27,4 @@ public class LentSubject {
     @Column(name = "Lent_Date")
     @Setter
     private Date lentDate;
-
-    //RELATIONSHIPS
-
-    @ManyToMany
-    @Setter
-    private List<Book> books;
 }
