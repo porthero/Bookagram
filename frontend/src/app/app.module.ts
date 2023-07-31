@@ -3,23 +3,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-import { CommonModule } from '@angular/common';
-import { TableComponent } from './table/table.component'; // Import the TableComponent
-import { BookService } from './book.service'; // Import the BookService
 
+// Import PrimeNG modules
+import { TableModule } from 'primeng/table'; // Import TableModule
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { TableComponent } from './table/table.component';
+import { BookService } from './book.service';
 
 @NgModule({
   declarations: [
-    TableComponent, // Make sure TableComponent is included here
+    AppComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    CommonModule,
     AppRoutingModule,
+
+    // Add PrimeNG modules to the imports
+    TableModule, // Import the TableModule
   ],
-  providers: [BookService], // Add BookService to the providers
-  bootstrap: [TableComponent],
+  providers: [BookService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

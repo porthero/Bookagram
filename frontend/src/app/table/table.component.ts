@@ -21,6 +21,7 @@ export class TableComponent implements OnInit {
   loadBooks(): void {
     this.bookService.getAllBooks().subscribe((data: Book[]) => {
       this.books = data;
+      console.log(this.books);
     });
   }
 }

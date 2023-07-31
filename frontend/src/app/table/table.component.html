@@ -1,22 +1,22 @@
-<!-- src/app/table/table.component.html -->
-
 <h2>Book Table</h2>
-<!-- src/app/table/table.component.html -->
 
-<table>
-  <thead>
-  <tr>
-    <th>ID</th>
-    <th>Title</th>
-    <th>ISBN</th>
-    <th>Publisher</th>
-    <th>Pages</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let book of books">
-    <td>{{ book.id }}</td>
-    <td>{{ book.title }}</td>
-  </tr>
-  </tbody>
-</table>
+<p-table [value]="books">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>ISBN</th>
+      <th>Publisher</th>
+      <th>Pages</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-book>
+    <tr>
+      <td>{{ book.id }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.publisher }}</td>
+      <td>{{ book.pages }}</td>
+    </tr>
+  </ng-template>
+</p-table>
