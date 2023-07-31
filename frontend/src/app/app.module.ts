@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 // Import PrimeNG modules
 import { TableModule } from 'primeng/table'; // Import TableModule
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // Import NgbModule from '@ng-bootstrap/ng-bootstrap'
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
@@ -18,9 +20,11 @@ import { BookService } from './book.service';
     TableComponent,
   ],
   imports: [
+    NgbModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    TableModule,
 
     // Add PrimeNG modules to the imports
     TableModule, // Import the TableModule
