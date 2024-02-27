@@ -6,7 +6,7 @@ import { TableComponent } from './table/table.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: '', component: TableComponent },
+  { path: 'table', component: TableComponent },
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];

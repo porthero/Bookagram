@@ -8,6 +8,10 @@
   <title>Homepage</title>
 </head>
 <body>
-  <i class="pi pi-book" style="font-size: 50rem; left: 50vw;"></i>
+<div class="book-container">
+  <fa-icon *ngIf="!isBookOpen" [icon]="faBook" class="closed-book" (click)="toggleBook()"></fa-icon>
+  <fa-icon *ngIf="isBookOpen" [@fadeZoomOut] [icon]="faBookOpen" class="open-book" (click)="navigateToTable()"></fa-icon>
+  <h3 *ngIf="isBookOpen">CIAO *UTENTE LOGGATO*!</h3>
+</div>
 </body>
 </html>

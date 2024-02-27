@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Import PrimeNG modules
 import { TableModule } from 'primeng/table'; // Import TableModule
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
 import { TableComponent } from './table/table.component';
 import { BookService } from './book.service';
 import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     AppRoutingModule,
     TableModule,
-    SharedModule
+    SharedModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent],
