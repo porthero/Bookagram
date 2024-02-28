@@ -24,6 +24,9 @@ public class BookController {
         return bookService.create(book);
     }
 
+    @PostMapping("/update")
+    public Book updateBook (@RequestBody Book book) { return bookService.update(book); }
+
     @GetMapping("/{id}")
     public Book getBookById(@PathVariable Long id) {
     return  bookService.getById(id);

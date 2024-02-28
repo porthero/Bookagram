@@ -56,6 +56,12 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.6.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.mapstruct</groupId>
+			<artifactId>mapstruct-processor</artifactId>
+			<version>1.5.2.Final</version> <!-- Use the latest version available -->
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
