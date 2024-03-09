@@ -1,0 +1,19 @@
+.book-container{
+text-align: center;
+}
+
+.closed-book {
+font-size: 30rem;
+}
+
+.closed-book:hover{
+color: blue;
+}
+
+.open-book {
+font-size: 30rem;
+}
+
+.open-book:hover{
+color: blue;
+}
