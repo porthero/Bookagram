@@ -15,9 +15,9 @@ import java.util.stream.Collectors;
 public class BookServiceImpl implements BookService {
 
     @Autowired
-    private final BookRepository bookRepository;
+    private BookRepository bookRepository;
     @Autowired
-    private final BookMapper bookMapper;
+    private BookMapper bookMapper;
 
     @Override
     public BookModel create(BookModel bookModel) {
