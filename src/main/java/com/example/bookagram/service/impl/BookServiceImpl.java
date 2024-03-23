@@ -14,14 +14,10 @@ import java.util.stream.Collectors;
 @Service
 public class BookServiceImpl implements BookService {
 
-    private final BookRepository bookRepository;
-    private final BookMapper bookMapper;
-
     @Autowired
-    public BookServiceImpl(BookRepository bookRepository, BookMapper bookMapper) {
-        this.bookRepository = bookRepository;
-        this.bookMapper = bookMapper;
-    }
+    private final BookRepository bookRepository;
+    @Autowired
+    private final BookMapper bookMapper;
 
     @Override
     public BookModel create(BookModel bookModel) {
