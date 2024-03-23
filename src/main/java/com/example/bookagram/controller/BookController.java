@@ -1,7 +1,6 @@
 package com.example.bookagram.controller;
 
-import com.example.bookagram.model.Book;
-import com.example.bookagram.repository.BookRepository;
+import com.example.bookagram.model.BookModel;
 import com.example.bookagram.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,28 +12,30 @@ import java.util.List;
 @RequestMapping("/api/books")
 public class BookController {
 
-    @Autowired
-    private BookService bookService;
+    private final BookService bookService;
 
     @Autowired
-    private BookRepository bookRepository;
+    public BookController(BookService bookService) {
+        this.bookService = bookService;
+    }
 
     @PostMapping("/create")
-    public Book createBook (@RequestBody Book book) {
-        return bookService.create(book);
+    public BookModel createBook(@RequestBody BookModel bookModel) {
+        return bookService.create(bookModel);
     }
 
     @PostMapping("/update")
-    public Book updateBook (@RequestBody Book book) { return bookService.update(book); }
+    public BookModel updateBook(@RequestBody BookModel bookModel) {
+        return bookService.update(bookModel);
+    }
 
     @GetMapping("/{id}")
-    public Book getBookById(@PathVariable Long id) {
-    return  bookService.getById(id);
+    public BookModel getBookById(@PathVariable Long id) {
+        return bookService.getById(id);
     }
 
     @GetMapping
-    public List<Book> getAllBooks() {
-        return bookRepository.findAll();
+    public List<BookModel> getAllBooks() {
+        return bookService.getAllBooks();
     }
-
 }

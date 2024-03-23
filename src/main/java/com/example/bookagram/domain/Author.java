@@ -1,10 +1,11 @@
-package com.example.bookagram.model;
+package com.example.bookagram.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -28,7 +29,7 @@ public class Author {
 
     @Column
     @Setter
-    private Date deathDate;
+    private LocalDate deathDate;
 
     @Column
     @Setter

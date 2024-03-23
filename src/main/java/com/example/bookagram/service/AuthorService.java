@@ -1,6 +1,6 @@
 package com.example.bookagram.service;
 
-import com.example.bookagram.model.Author;
+import com.example.bookagram.domain.Author;
 import com.example.bookagram.repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

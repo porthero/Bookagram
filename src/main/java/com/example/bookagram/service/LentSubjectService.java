@@ -1,6 +1,6 @@
 package com.example.bookagram.service;
 
-import com.example.bookagram.model.LentSubject;
+import com.example.bookagram.domain.LentSubject;
 import com.example.bookagram.repository.LentSubjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
