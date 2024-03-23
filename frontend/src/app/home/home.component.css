@@ -3,7 +3,7 @@ text-align: center;
 }
 
 .closed-book {
-font-size: 30rem;
+font-size: 20rem;
 }
 
 .closed-book:hover{
@@ -11,7 +11,7 @@ color: blue;
 }
 
 .open-book {
-font-size: 30rem;
+font-size: 20rem;
 }
 
 .open-book:hover{
