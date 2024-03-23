@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Getter
-@Table(name = "Category")
+@Table(name = "category")
 public class Category {
 
     @Id
