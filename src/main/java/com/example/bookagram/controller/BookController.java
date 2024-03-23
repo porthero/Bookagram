@@ -12,12 +12,8 @@ import java.util.List;
 @RequestMapping("/api/books")
 public class BookController {
 
-    private final BookService bookService;
-
     @Autowired
-    public BookController(BookService bookService) {
-        this.bookService = bookService;
-    }
+    private BookService bookService;
 
     @PostMapping("/create")
     public BookModel createBook(@RequestBody BookModel bookModel) {
@@ -34,7 +30,7 @@ public class BookController {
         return bookService.getById(id);
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     public List<BookModel> getAllBooks() {
         return bookService.getAllBooks();
     }

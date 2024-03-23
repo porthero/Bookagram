@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "Author")
+@Table(name = "author")
 @Getter
 public class Author {
 

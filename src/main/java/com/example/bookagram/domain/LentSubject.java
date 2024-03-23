@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity
-@Table(name = "LentSubject")
+@Table(name = "lent_subject")
 @Getter
 public class LentSubject {
 
@@ -20,12 +20,12 @@ public class LentSubject {
 
     //ATTRIBUTES
 
-    @Column(name = "Name")
+    @Column(name = "name")
     @Setter
     //@NotEmpty
     private String name;
 
-    @Column(name = "Lent_Date")
+    @Column(name = "lent_date")
     @Setter
     private LocalDate lentDate;
 }
