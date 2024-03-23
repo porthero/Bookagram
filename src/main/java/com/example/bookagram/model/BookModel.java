@@ -1,7 +1,10 @@
 package com.example.bookagram.model;
 
+import lombok.Data;
+
 import java.util.List;
 
+@Data
 public class BookModel {
     private Long id;
     private String title;
