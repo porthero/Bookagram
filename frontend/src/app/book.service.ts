@@ -21,4 +21,10 @@ export class BookService {
     const createUrl = `${this.apiUrl}/create`;
     return this.http.post<Book>(createUrl, book);
   }
+
+  // Implement the getBookById method
+  getBookById(id: number): Observable<Book> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Book>(url);
+  }
 }
