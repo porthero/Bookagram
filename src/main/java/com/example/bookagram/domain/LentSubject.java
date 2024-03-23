@@ -1,4 +1,4 @@
-package com.example.bookagram.model;
+package com.example.bookagram.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -26,5 +27,5 @@ public class LentSubject {
 
     @Column(name = "Lent_Date")
     @Setter
-    private Date lentDate;
+    private LocalDate lentDate;
 }

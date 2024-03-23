@@ -1,7 +1,6 @@
 package com.example.bookagram.repository;
 
-import com.example.bookagram.model.Book;
-import com.example.bookagram.model.LentSubject;
+import com.example.bookagram.domain.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

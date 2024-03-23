@@ -1,4 +1,4 @@
-package com.example.bookagram.model;
+package com.example.bookagram.domain;
 
 import jakarta.persistence.*;
 import lombok.Getter;
